@@ -1,0 +1,21 @@
+<div class="dashboard">
+  <div class="block">
+    <div class="block-header">
+      <h1>Mis Licencias</h1>
+    </div>
+    <div class="block-body">
+      <div class="license row" *ngFor="let license of user_licenses">
+        <div class="icon">
+          <span class="helper"></span>
+          <img src="assets/img/license-type/{{license['type']}}.svg" alt="License type">
+        </div>
+        <div class="content">
+          <h2>{{license['number']}}</h2>
+          {{license['client'] + ' - ' + license['type']}}<br>
+          <b *ngIf="license['end_date']">Vence: </b>{{license['end_date']}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

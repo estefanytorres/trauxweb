@@ -1,0 +1,35 @@
+section {
+  padding: 8em 0 4em 0;
+  min-height: 100vh;
+  background-image: url('../../../assets/img/banner-contact.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.container {
+  animation: appear ease 1s;
+}
+
+@keyframes appear{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+.col {
+  padding: 2em;
+  text-align: center;
+}
+
+#otros-contactos {
+  margin-top: 3em;
+}
+
+#otros-contactos .block-body {
+  text-align: left;
+}
+#otros-contactos i {
+  margin: 0 1em;
+}

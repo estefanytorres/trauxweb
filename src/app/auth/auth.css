@@ -1,0 +1,56 @@
+header {
+  padding: 1em 2em;
+  background-color: var(--color-dark);
+  color: var(--color-dark-font);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000000;
+}
+header img {
+  height: 3em;
+}
+.block {
+  padding-top: 80px;
+  min-height: 80vh;
+}
+footer {
+  padding: 2em 2em;
+  background-color: var(--color-dark);
+  color: var(--color-dark-font);
+  text-align: center;
+  min-height: 20vh;
+}
+
+/* ================================================================================================================== */
+/* ================================================================================================================== */
+/* ============================================== RESPONSIVE LOGIC ================================================== */
+/* ================================================================================================================== */
+/* ================================================================================================================== */
+
+/*Small devices (landscape phones, 576px and up)*/
+/*@media (min-width: 576px) {}*/
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+  .container-login {
+    width: 40em;
+    padding: 5em;
+    min-height: calc(80vh - 80px);
+    margin: 80px auto 0 auto;
+  }
+  .block {
+    padding-top: 0;
+    min-height: 0;
+  }
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+/*@media (min-width: 992px) {}*/
+
+/*Extra large devices (large desktops, 1200px and up)*/
+/*@media (min-width: 1200px) {}*/

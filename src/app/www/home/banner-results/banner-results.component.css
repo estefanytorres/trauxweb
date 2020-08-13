@@ -1,0 +1,30 @@
+#banner-results {
+  margin: 5em 0;
+  text-align: center;
+}
+#banner-results h1 {
+  font-size: 2.2em;
+  margin-bottom: 1em;
+}
+#banner-results p {
+  margin-bottom: 3em;
+}
+#banner-results .btn {
+  display: block;
+  width: 21ch;
+  text-align: left;
+  margin: 0 auto 1em;
+}
+#banner-results img {
+  width: 100%;
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  #banner-results {
+    text-align: left;
+  }
+  #banner-results .btn {
+    margin-left: 0;
+  }
+}

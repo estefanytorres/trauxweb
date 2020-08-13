@@ -1,0 +1,61 @@
+<header>
+  <a routerLink="/"><img src="assets/logo-fondoazul.png" alt="Logo"></a>
+</header>
+<section>
+  <div class="container-login">
+    <div class="block">
+      <div class="block-body">
+        <ngb-alert *ngIf="showAlert" [dismissible]="false" [type]="alertType">
+          {{alertMessage}}
+        </ngb-alert>
+        <form *ngIf="!(showAlert && alertType==='success')" [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="license">Licencia</label>
+            <i class="fa fa-question-circle" placement="right"
+                    ngbPopover="Para poder acceder al sistema es necesario que ya tenga una licencia, si no la tiene,
+                    porfavor comuníquese con nosotros"
+                    popoverTitle="Licencia">
+            </i>
+            <input type="text" id="license" formControlName="license" class="form-control" required
+                   [ngClass]="{ 'is-invalid': submitted && f.license.errors }" [(ngModel)]="authUser.license" maxlength="12"/>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input autofocus type="text" id="email" formControlName="email" class="form-control" required
+                   [ngClass]="{ 'is-invalid': submitted && f.email.errors }" [(ngModel)]="authUser.email"/>
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" formControlName="password" class="form-control" required
+                   [ngClass]="{ 'is-invalid': submitted && f.password.errors }" [(ngModel)]="authUser.password"/>
+          </div>
+          <div class="form-group">
+            <label for="password_check">Reingrese ontraseña</label>
+            <input type="password" id="password_check" formControlName="password_check" class="form-control" required
+                   [ngClass]="{ 'is-invalid': submitted && f.password.errors }" [(ngModel)]="password_check"/>
+          </div>
+          <div class="form-group">
+            <label for="first_name">Nombre</label>
+            <input type="text" id="first_name" formControlName="first_name" class="form-control" required
+                   [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }" [(ngModel)]="authUser.first_name"/>
+          </div>
+          <div class="form-group">
+            <label for="last_name">Apellido</label>
+            <input type="text" id="last_name" formControlName="last_name" class="form-control" required
+                   [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }" [(ngModel)]="authUser.last_name"/>
+          </div>
+          <button class="submit btn btn-primary">Crea tu cuenta</button>
+        </form>
+        <div class="vs-divider">
+          <h5>¿Ya tienes una cuenta?</h5>
+        </div>
+        <button class="btn btn-secondary" routerLink="/login">Inicia Sesión</button>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>traux&reg; 2019</p>
+</footer>
+
+

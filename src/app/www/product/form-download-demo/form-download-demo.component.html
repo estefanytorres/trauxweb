@@ -1,0 +1,42 @@
+<div class="block">
+  <div class="block-header">
+    <h1>Descarga un DEMO</h1>
+  </div>
+  <div class="block-body">
+    <ngb-alert *ngIf="showAlert" (close)="showAlert = false" [type]="alertType">
+      {{alertMessage}} <a *ngIf="alertType=='danger'" href="mailto:info@trauxerp.com">info@trauxerp.com</a>
+    </ngb-alert>
+    <p *ngIf="!showAlert">Ingrese la información en este formulario y le enviaremos una versión de traux administrativo con la posibilidad de usarlo en modo DEMO</p>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="text" formControlName="name" class="form-control" placeholder="Nombre" required
+               [ngClass]="{ 'is-invalid': submitted && f.name.errors }" [(ngModel)]="webConsult.name"/>
+        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+          <div *ngIf="f.name.errors.required">El nombre es un campo obligatorio</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" formControlName="company" class="form-control" placeholder="Empresa"
+               [ngClass]="{ 'is-invalid': submitted && f.company.errors }" [(ngModel)]="webConsult.company"/>
+        <div *ngIf="submitted && f.company.errors" class="invalid-feedback">
+          <div *ngIf="f.company.errors.required">El nombre es un campo obligatorio</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" formControlName="email" class="form-control" placeholder="Correo" required
+               [ngClass]="{ 'is-invalid': submitted && f.email.errors }" [(ngModel)]="webConsult.email"/>
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required">El correo es un campo obligatorio</div>
+          <div *ngIf="f.email.errors.email">El correo debe ser válido</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" formControlName="phone" class="form-control"  placeholder="Teléfono"
+               [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" [(ngModel)]="webConsult.phone"/>
+      </div>
+      <button class="submit btn btn-primary">Descargar</button>
+    </form>
+
+  </div>
+</div>

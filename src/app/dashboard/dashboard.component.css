@@ -1,0 +1,172 @@
+/* ===================================================== HEADER ===================================================== */
+header .navbar {
+  background-color: whitesmoke;
+  box-shadow: 0 0 3px grey;
+}
+header .navbar-brand img{
+  height: 40px;
+  margin-left: 1.3em;
+}
+#NavBar {
+  position: fixed;
+  background-color: var(--color-dark);
+  top: 66px;
+  left: 0;
+  height: calc(100vh - 66px);
+  width: 100%;
+  flex-direction: column;
+}
+
+/deep/ #NavBar ngb-accordion {
+  width: 100%;
+}
+/deep/ #NavBar .card {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+/deep/ #NavBar .card-header {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+}
+/deep/ #NavBar a {
+  display: block;
+  padding: 1em;
+  text-align: left;
+  text-decoration: none;
+}
+/deep/ #NavBar a i {
+  margin-right: 1em;
+}
+/deep/ #NavBar button {
+  background-color: transparent;
+  padding: 2px;
+  border: 0;
+}
+/deep/ #NavBar button:hover {
+  text-decoration: none;
+}
+/deep/ #NavBar button.collapsed:hover {
+  background-color: rgba(0,0,0,.3);
+  padding: 2px 2px 2px 0;
+  border-left: 2px solid var(--color-light);
+  color: var(--color-dark-font);
+  text-decoration: none;
+}
+/deep/ #NavBar button a {
+  color: var(--color-light);
+}
+/deep/ #NavBar button a:hover{
+  color: var(--color-light);
+}
+/deep/ #NavBar button.collapsed a{
+  color: var(--color-dark-font);
+}
+/deep/ #NavBar button.collapsed a:hover{
+  color: var(--color-dark-font);
+}
+/deep/ #NavBar .card-body {
+  padding: 0;
+  background-color: rgba(0,0,0,.3);
+}
+/deep/ #NavBar .card-body a {
+  padding-left: 1.8em;
+  color: var(--color-dark-font);
+}
+/deep/ #NavBar .card-body a.selected {
+  padding: .6em .6em .6em 1.8em;
+  background-color: var(--color-light);
+}
+/deep/ #NavBar .btn-link {
+  width: 100%;
+}
+
+
+#UserBar {
+  margin-left: auto;
+  padding: .55rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: .25rem;
+  color: rgba(0,0,0,.5);
+}
+.dropdown-user {
+  margin-top: 1em;
+  min-width: calc(100vw - 2em);
+  padding: 0;
+  color: rgba(0,0,0,.5);
+}
+.dropdown-user-header:hover, .dropdown-user .nav-link:hover{
+  background-color: var(--color-smoke);
+}
+.dropdown-user-header {
+  text-align: center;
+  padding: 1em;
+}
+.dropdown-user-header .icon {
+  height: 1.6em;
+  width: 1.6em;
+  border: 1px solid rgba(0,0,0,.1);
+  font-size: 2em;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  margin: 0 auto 0.5em auto;
+}
+.navbar-user li {
+  width: 100%;
+}
+.navbar-user .nav-link {
+  padding: 1em;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+.navbar-user .nav-link span{
+  margin-right: 1em;
+}
+
+.dashboard-container {
+  margin-top: 67px;
+  height: calc(100vh - 67px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* ================================================================================================================== */
+/* ================================================================================================================== */
+/* ============================================== RESPONSIVE LOGIC ================================================== */
+/* ================================================================================================================== */
+/* ================================================================================================================== */
+
+/*Small devices (landscape phones, 576px and up)*/
+/*@media (min-width: 576px) {}*/
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px){
+
+  .navbar-user {
+    margin-left: auto;
+  }
+  .dropdown-user {
+    min-width: 300px;
+  }
+  .dashboard-container {
+    margin-left: 12em;
+  }
+  #NavBar {
+    width: 12em;
+  }
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+/*@media (min-width: 992px) {}*/
+
+/*Extra large devices (large desktops, 1200px and up)*/
+/*@media (min-width: 1200px) {}*/
+
+
+

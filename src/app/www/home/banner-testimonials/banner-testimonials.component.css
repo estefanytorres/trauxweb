@@ -1,0 +1,74 @@
+/deep/ .carousel-control-next-icon {
+  background-image: url('../../../../assets/icons/next.svg');
+}
+/deep/ .carousel-control-prev-icon {
+  background-image: url('../../../../assets/icons/previous.svg');
+}
+/deep/ .slide:focus {
+  outline: None;
+}
+/deep/ #testimonials .carousel-indicators li {
+  border: 0px;
+  padding: 0;
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 100%;
+}
+/deep/ #testimonials .carousel-item {
+  /* Force to always be block */
+  display: block !important;
+  z-index: 1;
+  position: absolute;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.3s;
+  visibility: hidden;
+}
+
+/deep/ #testimonials .carousel-item.active {
+  position: relative;
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+#testimonials .container {
+  min-height: 21em;
+  width: 80%;
+  padding-bottom: 3em;
+}
+
+/*--------------------*/
+
+section {
+  margin: 3em 0;
+  text-align: center;
+}
+img {
+  margin-bottom: 1em;
+  height: 4em;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1em;
+}
+p {
+  color: grey;
+}
+
+/* -------------------------------------------------- */
+
+
+@media only screen and (min-width: 768px) {
+
+  section {
+    text-align: right;
+  }
+  .logo {
+    text-align: left;
+  }
+
+}

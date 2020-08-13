@@ -1,0 +1,41 @@
+<section>
+  <div class="file-upload" *ngIf="state=='A'">
+
+    <div class="file-upload-add btn btn-secondary">
+      <input class="file-upload-input" type="file" (change)="onChange($event)" multiple accept="text/xml"/>
+      Incluir archivo(s) XML
+    </div>
+    <div class="file-upload-wrap">
+      <input class="file-upload-input" type="file" (change)="onChange($event)" multiple accept="text/xml"/>
+      <h3>Arrastre sus archivos o haga click aquí para buscarlos</h3>
+    </div>
+    <div class="file-upload-content" *ngIf="files">
+      <div class="file-item" *ngFor="let file of files; let i = index">
+        <h3>{{file['name']}}</h3>
+        <button class="file-item-remove btn btn-danger" type="button" [attr.data-index]="i" (click)="onRemoveUpload($event)" >
+          <span><i class="fa fa-trash"></i></span>
+        </button>
+      </div>
+    </div>
+    <button class="submit btn btn-primary" type="submit" (click)="onSubmit()" [hidden]="files.length==0">Descargar archivo CSV</button>
+
+  </div>
+  <div class="file-processing" *ngIf="state=='P'">
+    <!-- TODO: Set this image local -->
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Loading">
+  </div>
+  <div class="file-processing" *ngIf="state=='S'">
+    <ngb-alert [dismissible]="false" type="success">
+      Se ha creado un archivo CSV a partir de los documentos y se ha enviado a su correo electrónico
+    </ngb-alert>
+    <button class="submit btn btn-primary" (click)="ngOnInit()">Procesar más archivos</button>
+  </div>
+  <div class="file-processing" *ngIf="state=='E'">
+    <ngb-alert [dismissible]="false" type="danger">
+      Ocurrió un error al procesar sus archivos, por favor intente más tarde o comuniquése con nosotros a través de
+      <a href="mailto:soporte@trauxerp.com">soporte@trauxerp.com</a>
+    </ngb-alert>
+    <button class="submit btn btn-primary" (click)="ngOnInit()">Intentar de nuevo</button>
+  </div>
+</section>
+

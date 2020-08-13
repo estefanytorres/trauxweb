@@ -1,0 +1,141 @@
+/* =============================================== GLOBAL VARIABLES ================================================= */
+:root {
+  --sm-min-width: 576px;
+  --md-min-width: 768px;
+  --lg-min-width: 992px;
+  --xl-min-width: 1200px;
+
+  --color-dark: #2B3A75;
+  --color-dark-shadow: #1f2952;
+  --color-dark-font: #FFF;
+  --color-medium: #3A6666;
+  --color-light: #73CBC7;
+  --color-smoke: whitesmoke;
+  --color-shadow: grey;
+  --color-grey-font: #7D7D7D
+}
+/* ================================================= GLOBAL STYLES ================================================== */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-size: 1.8em;
+}
+.btn-primary, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  color: var(--color-dark-font);
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+.btn-primary:hover {
+  background-color: var(--color-medium);
+  border-color: var(--color-medium);
+}
+.form-group {
+  margin: .5em 0;
+}
+.submit {
+  margin: .5em 0;
+  width: 100%;
+}
+.submit:disabled {
+  border-color: var(--color-shadow);
+  background-color: var(--color-shadow);
+}
+.hidden {
+  display: none;
+}
+.fa-question-circle {
+  float: right;
+}
+.fa-question-circle:hover {
+  color: var(--color-medium);
+}
+
+/* ==================================================== BLOCKS ====================================================== */
+.block {
+  background-color: var(--color-smoke);
+  box-shadow: 0 0 3px var(--color-shadow);
+}
+.block-header {
+  padding: 1em 2em;
+  background-color: var(--color-dark);
+  color: var(--color-dark-font);
+}
+.block-header h1 {
+  font-size: 1.8em;
+  margin: 0;
+}
+.block-body {
+  text-align: left;
+  padding: 1em;
+  background-color: var(--color-smoke);
+}
+.block h1 {
+  font-size: 1.8em;
+}
+.block .btn {
+  width: 100%;
+}
+/* ================================================== TALK BUBBLE =================================================== */
+.talk-bubble {
+  background-color: var(--color-smoke);
+  margin-bottom: 2em;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+}
+.talk-bubble .text {
+  padding: 1.5em;
+}
+.talk-bubble .text p:last-of-type {
+  margin: 0;
+}
+.talk-bubble::after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: 3em;
+  border: 12px solid;
+  border-color: var(--color-smoke) var(--color-smoke) transparent transparent;
+}
+
+/* ==================================================== FORMS ====================================================== */
+.form-group label {
+  margin: 0 0 .3em .3em;
+  font-weight: bold;
+}
+
+/* ===================================================== OTHER ====================================================== */
+.vs-divider {
+  margin: 1em 0;
+  text-align: center;
+}
+.vs-divider h5{
+  margin: 0;
+  color: var(--color-grey-font);
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  background-color: var(--color-smoke);
+  padding: 0 1em;
+}
+.vs-divider::after {
+  content: "";
+  display: block;
+  height: 1px;
+  border-top: 1px solid var(--color-grey-font);
+  width: 100%;
+  position: relative;
+  top: -.8em;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 992px) {
+
+  h1 {
+    font-size: 3em;
+  }
+
+}

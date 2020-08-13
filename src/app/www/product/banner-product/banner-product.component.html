@@ -1,0 +1,43 @@
+<section>
+  <div class="container">
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/DLMnGoimOnM"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <h2>traux administrativo</h2>
+    <p>traux es un sistema que integra todos los procesos administrativos, cada transacción queda registrada para
+      ser usada por los diferentes departamentos que componen la organización, de esta manera se asegura la precisión
+      de los datos y se elimina la redundancia</p>
+    <p>traux administrativo incluye los siguientes módulos funcionales:</p>
+    <div class="trauxmenu-grid">
+      <ng-container *ngFor="let menu of included_menus">
+        <div class="cell">
+          <!--          <div [class]="(selected && selected.name===menu.name) ? 'icon active' : 'icon'" [style.background-color]="menu.color" (click)="SelectMenu($event, menu)" >-->
+          <div class="icon" [style.background-color]="menu.color">
+            <img [src]="menu.icon_path" [alt]="menu.name">
+          </div>
+          <h3>{{ menu.name }}</h3>
+        </div>
+        <!--        <div class="menu-definition" *ngIf="selected && selected.name===menu.name">-->
+        <!--          <p [innerText]="menu.description"></p>-->
+        <!--        </div>-->
+      </ng-container>
+    </div>
+    <h2>Módulos adicionales</h2>
+    <p>Adicionalmente hemos desarrollados applicaciones específicas para satisfacer modelos de negocio</p>
+    <div class="trauxmenu-grid">
+      <ng-container *ngFor="let menu of extra_menus">
+        <div class="cell">
+          <!--          <div [class]="(selected && selected.name===menu.name) ? 'icon active' : 'icon'" [style.background-color]="menu.color" (click)="SelectMenu($event, menu)">-->
+          <div class="icon" [style.background-color]="menu.color">
+            <img [src]="menu.icon_path" [alt]="menu.name">
+          </div>
+          <h3>{{ menu.name }}</h3>
+        </div>
+        <!--        <div class="menu-definition" *ngIf="selected && selected.name===menu.name">-->
+        <!--          <p [innerText]="menu.description"></p>-->
+        <!--        </div>-->
+      </ng-container>
+    </div>
+  </div>
+</section>

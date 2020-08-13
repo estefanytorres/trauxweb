@@ -1,0 +1,57 @@
+/* ===================================================== HEADER ===================================================== */
+header .navbar {
+  background-color: whitesmoke;
+  box-shadow: 0 0 3px grey;
+}
+header .navbar-brand img{
+  height: 40px;
+  margin-right: 1em;
+}
+
+/* ===================================================== FOOTER ===================================================== */
+footer {
+  background-color: var(--color-dark);
+  color: var(--color-dark-font);
+  text-align: center;
+  padding: 3em 0;
+  height: auto;
+}
+footer a{
+  color: var(--color-dark-font);
+}
+footer i {
+  font-size: 2em;
+  margin-left: 0.5em;
+}
+footer .col-md-4 {
+  margin-top: 1em;
+}
+
+/* ================================================================================================================== */
+/* ================================================================================================================== */
+/* ============================================== RESPONSIVE LOGIC ================================================== */
+/* ================================================================================================================== */
+/* ================================================================================================================== */
+
+/*Small devices (landscape phones, 576px and up)*/
+/*@media (min-width: 576px) {}*/
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+  /* ========================================= FOOTER ========================================== */
+  footer .col-md-8 {
+    text-align: left;
+  }
+  footer .col-md-4 {
+    margin-top: 0;
+    text-align: right;
+  }
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+/*@media (min-width: 992px) {}*/
+
+/*Extra large devices (large desktops, 1200px and up)*/
+/*@media (min-width: 1200px) {}*/

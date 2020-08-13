@@ -1,0 +1,54 @@
+<header>
+  <nav class="navbar navbar-expand-md fixed-top navbar-light">
+    <div class="container">
+
+      <a class="navbar-brand" routerLink="/" (click)="isNavbarCollapsed = true"><img src="assets/logo-sinescrito.png" alt="Logo"></a>
+
+
+
+      <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+        <ul class="navbar-nav mr-auto" (click)="isNavbarCollapsed = !isNavbarCollapsed">
+          <li><a class="nav-link" routerLink="/producto">Producto</a></li>
+          <li><a class="nav-link" routerLink="/contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-primary" routerLink="/dashboard"><i class="fa fa-user"></i></a>
+
+
+
+    </div>
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
+        <h1>Enlaces</h1>
+        <a href="http://academia.trauxerp.com" target="_blank">trauxAcademia</a>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <p>
+          <a href="https://www.facebook.com/Traux-ERP-1968993820072017/" target="_blank"><i class="fa fa-facebook-f"></i></a>
+          <!--        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>-->
+          <a href="https://www.instagram.com/trauxerp/" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCzSDzP4EDRpA8KsstSGzcEA" target="_blank"><i class="fa fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/company/vsoftca/about/" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@trauxerp.com"><i class="fa fa-envelope"></i></a>
+        </p>
+        <p><a href="mailto:info@trauxerp.com">info@trauxerp.com</a></p>
+        <p>+57 (312) 290-2068</p>
+        <p>traux&reg; 2019</p>
+        <p class="hidden">Versión 1.1</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+

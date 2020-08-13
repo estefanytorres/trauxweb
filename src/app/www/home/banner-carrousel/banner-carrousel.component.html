@@ -1,0 +1,12 @@
+<section id="slidedeck">
+  <ngb-carousel [showNavigationArrows]=0 [pauseOnHover]=0>
+    <ng-template ngbSlide *ngFor="let slide of home_slides">
+      <!--  TODO: make this bindable, current problem is that preload is not working [style.background-image]="slide.background_path" -->
+      <div class="carousel-slide" id="{{slide.name}}">
+        <div class="carousel-message">
+          <h1>{{slide.message}}</h1>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</section>

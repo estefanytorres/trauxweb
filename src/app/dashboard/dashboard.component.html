@@ -1,0 +1,55 @@
+<header>
+  <nav class="navbar navbar-expand-md fixed-top navbar-light">
+
+    <!--  Menu  -->
+    <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed"
+            data-target="#NavBar" aria-controls="NavBar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="NavBar" class="collapse navbar-collapse" [ngbCollapse]="isNavbarCollapsed">
+      <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="home" (panelChange)="beforeChange($event)">
+        <ngb-panel id="home">
+          <ng-template ngbPanelTitle>
+            <a routerLink="/dashboard" (click)="isNavbarCollapsed=true"><i class="fa fa-home"></i>Inicio</a>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="services">
+          <ng-template ngbPanelTitle>
+            <a routerLink="processfile"><i class="fa fa-briefcase"></i>Mis Servicios</a>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <!-- TODO: make this selected class dynamic -->
+            <a class="selected" routerLink="processfile"(click)="isNavbarCollapsed=true"><i class="fa fa-angle-right"></i>Archivos XML</a>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+
+    <!--  Logo  -->
+    <a class="navbar-brand" routerLink="/dashboard" (click)="isNavbarCollapsed=true; acc.toggle('home')">
+      <img src="assets/logo-sinescrito.png" alt="Logo">
+    </a>
+
+    <!--  User Options  -->
+    <div ngbDropdown placement="bottom-right" class="navbar-user">
+      <button id="UserBar" type="button" ngbDropdownToggle>
+        <span><i class="fa fa-user"></i></span>
+      </button>
+      <div ngbDropdownMenu aria-labelledby="UserBar" class="dropdown-user">
+        <div class="dropdown-user-header">
+          <div class="icon">
+            <span><i class="fa fa-user"></i></span>
+          </div>
+          <h6>{{user.username}}</h6>
+        </div>
+        <ul class="navbar-nav navbar-user">
+          <li><a class="nav-link" (click)="logOut()"><span><i class="fa fa-sign-out"></i></span>Cerrar sesión</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+</header>
+<div class="dashboard-container">
+<router-outlet></router-outlet>
+</div>

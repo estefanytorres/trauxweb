@@ -1,0 +1,41 @@
+.banner {
+  width: 100%;
+  min-height: 100vh;
+  padding: 8em 0 4em 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('../../../../assets/img/banner-product.jpg');
+}
+
+.banner h1 {
+  color: white;
+  position: relative;
+  animation: appear ease 1s;
+  margin-bottom: 2em;
+}
+
+.banner .container {
+  animation: appear ease 1s;
+  top: 0em;
+}
+
+@keyframes appear{
+  0% {
+    opacity:0;
+    top: -5em;
+  }
+  100% {
+    opacity:1;
+    top: 0em;
+  }
+}
+
+/* small */
+@media only screen and (min-width: 768px) {
+  .banner h1 {
+    padding: 2em 1em;
+    text-align: left;
+  }
+}
+
+

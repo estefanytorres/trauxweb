@@ -1,0 +1,31 @@
+<section id="testimonials">
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let testimonial of testimonials">
+    <div class="container">
+      <div class="row" >
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <!--            <div class="container">-->
+          <!--              <img [src]=testimonial.logo_path [alt]=testimonial.company>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <!--          <div class="col-xs-12 col-md-12 col-lg-12">-->
+          <div class="talk-bubble">
+            <div class="text">
+              <p>{{testimonial.content}}</p>
+            </div>
+          </div>
+          <div class="row" >
+            <div class="col-sm-12 col-md-2 logo">
+              <img [src]=testimonial.logo_path [alt]=testimonial.company>
+            </div>
+            <div class="col-sm-12 col-md-10 ">
+              <h1>{{testimonial.name}}</h1>
+              <h2>{{testimonial.position+', '+testimonial.company}}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>
+</section>
